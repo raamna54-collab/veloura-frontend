@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     .value;
 
 
-            // Check password
+            // Password match
             if (password !== confirmPassword) {
 
                 alert("Passwords do not match!");
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
-            // Check password length
+            // Password length
             if (password.length < 6) {
 
                 alert(
@@ -203,8 +203,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
 
 
+                // Login ke baad HOME par jao
                 window.location.href =
-                    "account.html";
+                    "index.html";
+
 
             } catch (error) {
 
@@ -280,7 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
-    // GOOGLE LOGIN / REGISTER
+    // GOOGLE LOGIN
     // =====================================================
 
     const googleLoginButton =
@@ -302,6 +304,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
+    // =====================================================
+    // GOOGLE REGISTER
+    // =====================================================
 
     const googleRegisterButton =
         document.getElementById("google-register-btn");
