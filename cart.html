@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart — Veloura</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">Veloura</h2>
+            </a>
+
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item"><a href="index.html" class="nav-link ">Home</a></li>
+                <li class="nav-item"><a href="makeup.html" class="nav-link ">Makeup</a></li>
+                <li class="nav-item"><a href="skincare.html" class="nav-link ">Skincare</a></li>
+                <li class="nav-item"><a href="haircare.html" class="nav-link ">Haircare</a></li>
+                <li class="nav-item"><a href="fragrance.html" class="nav-link ">Fragrance</a></li>
+                <li class="nav-item"><a href="bath-body.html" class="nav-link ">Bath &amp; Body</a></li>
+                <li class="nav-item"><a href="sale.html" class="nav-link sale-link ">Sale</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button class="icon-btn" id="search-toggle" aria-label="Search"><i class="fas fa-search"></i></button>
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+                <a href="login.html" class="icon-btn" aria-label="Account"><i class="far fa-user"></i></a>
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">2</span>
+                </a>
+            </div>
+
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+
+        <div class="search-panel" id="search-panel">
+            <div class="section-content search-panel-inner">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for products, e.g. lipstick, serum, perfume…" id="header-search-input">
+                <button id="search-close-button" class="fas fa-times"></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <main class="simple-page">
+        <div class="section-content">
+            <span class="breadcrumb"><a href="index.html">Home</a> / Cart</span>
+            <h1 class="shop-title">Shopping Cart</h1>
+
+            <div class="cart-layout">
+                <div class="cart-list" id="cart-items"></div>
+
+                <aside class="order-summary" id="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal">Rs. 0</span></div>
+                    <div class="summary-row"><span>Discount</span><span id="summary-discount">Rs. 0</span></div>
+                    <div class="summary-row"><span>Delivery</span><span id="summary-delivery">Rs. 0</span></div>
+                    <div class="summary-row summary-total-row"><span>Total</span><span id="summary-total">Rs. 0</span></div>
+                    <a href="checkout.html" class="button primary-button checkout-btn">Proceed to Checkout</a>
+                </aside>
+            </div>
+
+            <div class="related-section">
+                <h2 class="section-title">You May Also Like</h2>
+                <div class="product-grid" id="you-may-also-like"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-content footer-grid">
+            <div class="footer-col">
+                <h2 class="logo-text">Veloura</h2>
+                <p>Beauty essentials for your everyday glow.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="makeup.html">Makeup</a>
+                <a href="skincare.html">Skincare</a>
+                <a href="haircare.html">Haircare</a>
+                <a href="fragrance.html">Fragrance</a>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <a href="#">Shipping &amp; Returns</a>
+                <a href="#">Track Order</a>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 Veloura. All rights reserved.</p>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="storage.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

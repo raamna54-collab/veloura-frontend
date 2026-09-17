@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout — Veloura</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">Veloura</h2>
+            </a>
+
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item"><a href="index.html" class="nav-link ">Home</a></li>
+                <li class="nav-item"><a href="makeup.html" class="nav-link ">Makeup</a></li>
+                <li class="nav-item"><a href="skincare.html" class="nav-link ">Skincare</a></li>
+                <li class="nav-item"><a href="haircare.html" class="nav-link ">Haircare</a></li>
+                <li class="nav-item"><a href="fragrance.html" class="nav-link ">Fragrance</a></li>
+                <li class="nav-item"><a href="bath-body.html" class="nav-link ">Bath &amp; Body</a></li>
+                <li class="nav-item"><a href="sale.html" class="nav-link sale-link ">Sale</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button class="icon-btn" id="search-toggle" aria-label="Search"><i class="fas fa-search"></i></button>
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+                <a href="login.html" class="icon-btn" aria-label="Account"><i class="far fa-user"></i></a>
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">2</span>
+                </a>
+            </div>
+
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+
+        <div class="search-panel" id="search-panel">
+            <div class="section-content search-panel-inner">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for products, e.g. lipstick, serum, perfume…" id="header-search-input">
+                <button id="search-close-button" class="fas fa-times"></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <main class="simple-page">
+        <div class="section-content">
+            <span class="breadcrumb"><a href="index.html">Home</a> / <a href="cart.html">Cart</a> / Checkout</span>
+            <h1 class="shop-title">Checkout</h1>
+
+            <div id="checkout-form-wrap" class="checkout-layout">
+                <form id="checkout-form" class="checkout-form">
+                    <div class="form-section">
+                        <h3>Customer Information</h3>
+                        <div class="form-grid">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Delivery Address</h3>
+                        <div class="form-grid">
+                            <input type="text" placeholder="House / Flat No." required>
+                            <input type="text" placeholder="Area" required>
+                            <input type="text" placeholder="City" required>
+                            <input type="text" placeholder="Province" required>
+                            <input type="text" placeholder="Postal Code" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Delivery Method</h3>
+                        <label class="radio-card">
+                            <input type="radio" name="delivery" value="standard" checked>
+                            <span>Standard Delivery <em>3–5 days</em></span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="delivery" value="express">
+                            <span>Express Delivery <em>1–2 days · Rs. 500</em></span>
+                        </label>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Payment Method</h3>
+                        <label class="radio-card">
+                            <input type="radio" name="payment" value="cod" checked>
+                            <span><i class="fas fa-money-bill-wave"></i> Cash on Delivery</span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="payment" value="card">
+                            <span><i class="fas fa-credit-card"></i> Card</span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="payment" value="bank">
+                            <span><i class="fas fa-building-columns"></i> Bank Transfer</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="button primary-button place-order-btn">Place Order</button>
+                </form>
+
+                <aside class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items" class="checkout-items"></div>
+                    <div class="summary-row"><span>Subtotal</span><span id="checkout-subtotal">Rs. 0</span></div>
+                    <div class="summary-row"><span>Delivery</span><span id="checkout-delivery">Rs. 0</span></div>
+                    <div class="summary-row summary-total-row"><span>Total</span><span id="checkout-total">Rs. 0</span></div>
+                </aside>
+            </div>
+
+            <div id="order-confirmation" class="order-confirmation" style="display:none">
+                <i class="fas fa-circle-check"></i>
+                <h2>Order Placed!</h2>
+                <p>Your order <strong id="confirmed-order-id"></strong> has been placed. This is a frontend demo, so no real payment was processed.</p>
+                <a href="index.html" class="button primary-button">Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-content footer-grid">
+            <div class="footer-col">
+                <h2 class="logo-text">Veloura</h2>
+                <p>Beauty essentials for your everyday glow.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="makeup.html">Makeup</a>
+                <a href="skincare.html">Skincare</a>
+                <a href="haircare.html">Haircare</a>
+                <a href="fragrance.html">Fragrance</a>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <a href="#">Shipping &amp; Returns</a>
+                <a href="#">Track Order</a>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 Veloura. All rights reserved.</p>
+    </footer>
+
+    <script src="storage.js"></script>
+    <script src="products.js"></script>
+    <script src="checkout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

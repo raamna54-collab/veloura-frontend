@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Account — Veloura</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <nav class="navbar section-content">
+
+            <a
+                href="index.html"
+                class="nav-logo"
+            >
+                <h2 class="logo-text">
+                    Veloura
+                </h2>
+            </a>
+
+
+            <ul class="nav-menu">
+
+                <button
+                    id="menu-close-button"
+                    class="fas fa-times"
+                ></button>
+
+                <li class="nav-item">
+                    <a
+                        href="index.html"
+                        class="nav-link"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        href="makeup.html"
+                        class="nav-link"
+                    >
+                        Makeup
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        href="skincare.html"
+                        class="nav-link"
+                    >
+                        Skincare
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        href="haircare.html"
+                        class="nav-link"
+                    >
+                        Haircare
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        href="fragrance.html"
+                        class="nav-link"
+                    >
+                        Fragrance
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        href="bath-body.html"
+                        class="nav-link"
+                    >
+                        Bath &amp; Body
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        href="sale.html"
+                        class="nav-link sale-link"
+                    >
+                        Sale
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-icons">
+
+                <button
+                    class="icon-btn"
+                    id="search-toggle"
+                    aria-label="Search"
+                >
+                    <i class="fas fa-search"></i>
+                </button>
+
+
+                <a
+                    href="wishlist.html"
+                    class="icon-btn"
+                    aria-label="Wishlist"
+                >
+                    <i class="far fa-heart"></i>
+                </a>
+
+
+                <a
+                    href="account.html"
+                    class="icon-btn"
+                    aria-label="Account"
+                >
+                    <i class="far fa-user"></i>
+                </a>
+
+
+                <a
+                    href="cart.html"
+                    class="icon-btn cart-btn"
+                    aria-label="Cart"
+                >
+
+                    <i class="fas fa-shopping-bag"></i>
+
+                    <span class="cart-count">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <button
+                id="menu-open-button"
+                class="fas fa-bars"
+            ></button>
+
+        </nav>
+
+
+        <!-- SEARCH -->
+
+        <div
+            class="search-panel"
+            id="search-panel"
+        >
+
+            <div
+                class="section-content search-panel-inner"
+            >
+
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search for products, e.g. lipstick, serum, perfume…"
+                    id="header-search-input"
+                >
+
+                <button
+                    id="search-close-button"
+                    class="fas fa-times"
+                ></button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div
+        class="overlay"
+        id="overlay"
+    ></div>
+
+
+    <!-- ACCOUNT -->
+
+    <main class="simple-page">
+
+        <div class="section-content">
+
+            <span class="breadcrumb">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                /
+
+                My Account
+
+            </span>
+
+
+            <h1 class="shop-title">
+                My Account
+            </h1>
+
+
+            <!-- WELCOME -->
+
+            <div class="account-welcome">
+
+                <h2>
+                    Welcome,
+                    <span id="account-user-name">
+                        User
+                    </span>
+                    👋
+                </h2>
+
+                <p>
+                    Manage your Veloura account and orders.
+                </p>
+
+            </div>
+
+
+            <div class="account-layout">
+
+
+                <!-- SIDEBAR -->
+
+                <nav class="account-sidebar">
+
+                    <a
+                        href="#"
+                        class="account-nav-link active"
+                        data-tab="panel-profile"
+                    >
+
+                        <i class="far fa-user"></i>
+
+                        Profile Information
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="account-nav-link"
+                        data-tab="panel-orders"
+                    >
+
+                        <i class="fas fa-box"></i>
+
+                        My Orders
+
+                    </a>
+
+
+                    <a
+                        href="wishlist.html"
+                        class="account-nav-link"
+                    >
+
+                        <i class="far fa-heart"></i>
+
+                        Wishlist
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="account-nav-link"
+                        data-tab="panel-addresses"
+                    >
+
+                        <i class="fas fa-location-dot"></i>
+
+                        Saved Addresses
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="account-nav-link"
+                        data-tab="panel-payment"
+                    >
+
+                        <i class="far fa-credit-card"></i>
+
+                        Payment Methods
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="account-nav-link"
+                        data-tab="panel-settings"
+                    >
+
+                        <i class="fas fa-gear"></i>
+
+                        Settings
+
+                    </a>
+
+
+                    <!-- LOGOUT -->
+
+                    <a
+                        href="#"
+                        class="account-nav-link logout-link"
+                        id="logout-button"
+                    >
+
+                        <i class="fas fa-arrow-right-from-bracket"></i>
+
+                        Logout
+
+                    </a>
+
+                </nav>
+
+
+                <!-- ACCOUNT CONTENT -->
+
+                <div class="account-content">
+
+
+                    <!-- PROFILE -->
+
+                    <div
+                        class="account-panel active"
+                        id="panel-profile"
+                    >
+
+                        <h3>
+                            Profile Information
+                        </h3>
+
+
+                        <div class="form-grid">
+
+                            <div>
+
+                                <label>
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="account-name"
+                                    readonly
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label>
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="account-email"
+                                    readonly
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label>
+                                    Phone
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="account-phone"
+                                    readonly
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="account-note">
+                            Your profile information is linked to your Veloura account.
+                        </p>
+
+                    </div>
+
+
+                    <!-- ORDERS -->
+
+                    <div
+                        class="account-panel"
+                        id="panel-orders"
+                    >
+
+                        <h3>
+                            My Orders
+                        </h3>
+
+                        <div id="orders-list">
+
+                            <p class="empty-note">
+                                You haven't placed any orders yet.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ADDRESSES -->
+
+                    <div
+                        class="account-panel"
+                        id="panel-addresses"
+                    >
+
+                        <h3>
+                            Saved Addresses
+                        </h3>
+
+
+                        <div class="address-card">
+
+                            <strong>
+                                Home
+                            </strong>
+
+                            <p>
+                                No saved address yet.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="button secondary-button"
+                            type="button"
+                        >
+                            Add New Address
+                        </button>
+
+                    </div>
+
+
+                    <!-- PAYMENT -->
+
+                    <div
+                        class="account-panel"
+                        id="panel-payment"
+                    >
+
+                        <h3>
+                            Payment Methods
+                        </h3>
+
+                        <p class="empty-note">
+                            No saved payment methods yet — this is a frontend-only demo.
+                        </p>
+
+                    </div>
+
+
+                    <!-- SETTINGS -->
+
+                    <div
+                        class="account-panel"
+                        id="panel-settings"
+                    >
+
+                        <h3>
+                            Settings
+                        </h3>
+
+
+                        <label class="remember-me">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            Email me about new arrivals
+
+                        </label>
+
+
+                        <label class="remember-me">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            Email me about order updates
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="section-content footer-grid">
+
+
+            <div class="footer-col">
+
+                <h2 class="logo-text">
+                    Veloura
+                </h2>
+
+                <p>
+                    Beauty essentials for your everyday glow.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="makeup.html">
+                    Makeup
+                </a>
+
+                <a href="skincare.html">
+                    Skincare
+                </a>
+
+                <a href="haircare.html">
+                    Haircare
+                </a>
+
+                <a href="fragrance.html">
+                    Fragrance
+                </a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>
+                    Help
+                </h4>
+
+                <a href="#">
+                    Shipping &amp; Returns
+                </a>
+
+                <a href="#">
+                    Track Order
+                </a>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    FAQs
+                </a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>
+                    Follow Us
+                </h4>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="footer-bottom">
+
+            &copy; 2026 Veloura.
+            All rights reserved.
+
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="storage.js"></script>
+
+    <script src="products.js"></script>
+
+    <script src="account.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

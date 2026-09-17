@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product — Veloura</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav class="navbar section-content">
+
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">Veloura</h2>
+            </a>
+
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="makeup.html" class="nav-link">Makeup</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="skincare.html" class="nav-link">Skincare</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="haircare.html" class="nav-link">Haircare</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="fragrance.html" class="nav-link">Fragrance</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="bath-body.html" class="nav-link">
+                        Bath &amp; Body
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="sale.html" class="nav-link sale-link">
+                        Sale
+                    </a>
+                </li>
+            </ul>
+
+
+            <!-- NAV ICONS -->
+            <div class="nav-icons">
+
+                <button
+                    class="icon-btn"
+                    id="search-toggle"
+                    aria-label="Search"
+                >
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <a
+                    href="wishlist.html"
+                    class="icon-btn"
+                    aria-label="Wishlist"
+                >
+                    <i class="far fa-heart"></i>
+                </a>
+
+                <a
+                    href="login.html"
+                    class="icon-btn"
+                    aria-label="Account"
+                >
+                    <i class="far fa-user"></i>
+                </a>
+
+                <a
+                    href="cart.html"
+                    class="icon-btn cart-btn"
+                    aria-label="Cart"
+                >
+                    <i class="fas fa-shopping-bag"></i>
+
+                    <span class="cart-count">2</span>
+                </a>
+
+            </div>
+
+
+            <button
+                id="menu-open-button"
+                class="fas fa-bars"
+            ></button>
+
+        </nav>
+
+
+        <!-- SEARCH PANEL -->
+        <div class="search-panel" id="search-panel">
+
+            <div class="section-content search-panel-inner">
+
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search for products, e.g. lipstick, serum, perfume…"
+                    id="header-search-input"
+                >
+
+                <button
+                    id="search-close-button"
+                    class="fas fa-times"
+                ></button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- ================= PRODUCT DETAILS ================= -->
+
+    <main id="details-page">
+
+        <section class="details-section">
+
+            <div class="section-content">
+
+
+                <!-- BREADCRUMB -->
+                <span class="breadcrumb">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    /
+
+                    <a
+                        href=""
+                        id="breadcrumb-category"
+                    >
+                        Category
+                    </a>
+
+                </span>
+
+
+                <div class="details-layout">
+
+
+                    <!-- ================= GALLERY ================= -->
+
+                    <div class="details-gallery">
+
+                        <div class="main-image-wrap">
+
+                            <img
+                                id="main-image"
+                                src=""
+                                alt="Product image"
+                            >
+
+                        </div>
+
+
+                        <div
+                            class="thumbnail-list"
+                            id="thumbnail-list"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- ================= BUY BOX ================= -->
+
+                    <div class="details-buybox">
+
+
+                        <span
+                            class="product-brand"
+                            id="product-brand"
+                        ></span>
+
+
+                        <h1 id="product-name"></h1>
+
+
+                        <!-- RATING -->
+
+                        <div class="details-rating">
+
+                            <i class="fas fa-star"></i>
+
+                            <span id="product-rating-value"></span>
+
+                            <span class="review-count">
+                                (128 reviews)
+                            </span>
+
+                        </div>
+
+
+                        <!-- PRICE -->
+
+                        <div
+                            class="details-price"
+                            id="price-extras"
+                        >
+
+                            <span
+                                class="price"
+                                id="product-price"
+                            ></span>
+
+                            <span
+                                class="old-price"
+                                id="product-old-price"
+                            ></span>
+
+                            <span
+                                class="discount-tag"
+                                id="product-discount"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- DESCRIPTION -->
+
+                        <p
+                            class="details-description-short"
+                            id="product-description-short"
+                        ></p>
+
+
+
+                        <!-- SHADE -->
+
+                        <div class="option-block">
+
+                            <h4>Shade</h4>
+
+                            <div
+                                class="shade-list"
+                                id="shade-list"
+                            ></div>
+
+                        </div>
+
+
+
+                        <!-- SIZE -->
+
+                        <div class="option-block">
+
+                            <h4>Size</h4>
+
+                            <div class="size-list">
+
+                                <button class="size-btn active">
+                                    Standard
+                                </button>
+
+                                <button class="size-btn">
+                                    Travel
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- QUANTITY -->
+
+                        <div class="option-block">
+
+                            <h4>Quantity</h4>
+
+                            <div class="qty-stepper">
+
+                                <button id="qty-minus">
+                                    −
+                                </button>
+
+                                <span id="qty-value">
+                                    1
+                                </span>
+
+                                <button id="qty-plus">
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================= ACTION BUTTONS ================= -->
+
+                        <div class="details-actions">
+
+                            <!-- ADD TO CART -->
+
+                            <button
+                                class="button primary-button add-to-cart-btn"
+                            >
+                                Add to Cart
+                            </button>
+
+
+                            <!-- BUY NOW -->
+
+                            <button
+                                class="button secondary-button buy-now-btn"
+                            >
+                                Buy Now
+                            </button>
+
+
+                            <!-- ❤️ WISHLIST -->
+
+                            <button
+                                type="button"
+                                class="wishlist-btn details-wishlist-btn"
+                                aria-label="Add to wishlist"
+                                title="Add to Wishlist"
+                            >
+                                <i class="far fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= TABS ================= -->
+
+                <div class="details-tabs">
+
+                    <div class="tab-buttons">
+
+                        <button
+                            class="tab-btn active"
+                            data-tab="tab-description"
+                        >
+                            Description
+                        </button>
+
+                        <button
+                            class="tab-btn"
+                            data-tab="tab-ingredients"
+                        >
+                            Ingredients
+                        </button>
+
+                        <button
+                            class="tab-btn"
+                            data-tab="tab-howtouse"
+                        >
+                            How to Use
+                        </button>
+
+                        <button
+                            class="tab-btn"
+                            data-tab="tab-benefits"
+                        >
+                            Benefits
+                        </button>
+
+                        <button
+                            class="tab-btn"
+                            data-tab="tab-reviews"
+                        >
+                            Reviews
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="tab-panel active"
+                        id="tab-description"
+                    ></div>
+
+
+                    <div
+                        class="tab-panel"
+                        id="tab-ingredients"
+                    ></div>
+
+
+                    <div
+                        class="tab-panel"
+                        id="tab-howtouse"
+                    ></div>
+
+
+                    <div
+                        class="tab-panel"
+                        id="tab-benefits"
+                    ></div>
+
+
+                    <div
+                        class="tab-panel"
+                        id="tab-reviews"
+                    >
+
+                        <div class="testimonial-grid">
+
+                            <div class="testimonial-card">
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    "Absolutely loved this product!
+                                    Repurchasing already."
+                                </p>
+
+                                <span class="reviewer">
+                                    — Amina R.
+                                    <em>Verified Purchase</em>
+                                </span>
+
+                            </div>
+
+
+                            <div class="testimonial-card">
+
+                                <div class="stars">
+                                    ★★★★☆
+                                </div>
+
+                                <p>
+                                    "Great texture and it lasted
+                                    the whole day for me."
+                                </p>
+
+                                <span class="reviewer">
+                                    — Sara K.
+                                    <em>Verified Purchase</em>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= RELATED PRODUCTS ================= -->
+
+                <div class="related-section">
+
+                    <h2 class="section-title">
+                        You May Also Like
+                    </h2>
+
+                    <div
+                        class="product-grid"
+                        id="related-grid"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="section-content footer-grid">
+
+
+            <div class="footer-col">
+
+                <h2 class="logo-text">
+                    Veloura
+                </h2>
+
+                <p>
+                    Beauty essentials for your everyday glow.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Shop</h4>
+
+                <a href="makeup.html">
+                    Makeup
+                </a>
+
+                <a href="skincare.html">
+                    Skincare
+                </a>
+
+                <a href="haircare.html">
+                    Haircare
+                </a>
+
+                <a href="fragrance.html">
+                    Fragrance
+                </a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Help</h4>
+
+                <a href="#">
+                    Shipping &amp; Returns
+                </a>
+
+                <a href="#">
+                    Track Order
+                </a>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    FAQs
+                </a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>Follow Us</h4>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="footer-bottom">
+            &copy; 2026 Veloura. All rights reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="products.js"></script>
+<script src="storage.js"></script>
+<script src="api.js"></script>
+<script src="details.js"></script>
+
+</body>
+</html>

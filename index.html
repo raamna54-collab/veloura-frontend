@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Veloura — Beauty, Made Beautiful</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <nav class="navbar section-content">
+
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">Veloura</h2>
+            </a>
+
+            <ul class="nav-menu">
+
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="makeup.html" class="nav-link">Makeup</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="skincare.html" class="nav-link">Skincare</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="haircare.html" class="nav-link">Haircare</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="fragrance.html" class="nav-link">Fragrance</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="bath-body.html" class="nav-link">Bath &amp; Body</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="sale.html" class="nav-link sale-link">Sale</a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-icons">
+
+                <button class="icon-btn" id="search-toggle" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+                    <i class="far fa-heart"></i>
+                </a>
+
+                <a href="login.html" class="icon-btn" aria-label="Account">
+                    <i class="far fa-user"></i>
+                </a>
+
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">2</span>
+                </a>
+
+            </div>
+
+
+            <button id="menu-open-button" class="fas fa-bars"></button>
+
+        </nav>
+
+
+        <!-- Search Panel -->
+
+        <div class="search-panel" id="search-panel">
+
+            <div class="section-content search-panel-inner">
+
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search for products, e.g. lipstick, serum, perfume…"
+                >
+
+                <button
+                    id="search-close-button"
+                    class="fas fa-times">
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <main>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero-section">
+
+            <div class="section-content">
+
+                <div class="hero-details">
+
+                    <h2 class="title">
+                        Beauty, Made Beautiful
+                    </h2>
+
+                    <h3 class="subtitle">
+                        Discover makeup, skincare and haircare made for your everyday glow
+                    </h3>
+
+                    <p class="description">
+                        Discover beauty essentials designed to elevate your everyday routine.
+                        From makeup and skincare to haircare and fragrances, find everything
+                        you need to feel confident, radiant, and effortlessly beautiful.
+                    </p>
+
+
+                    <div class="buttons">
+
+                        <a href="sale.html"
+                           class="button primary-button">
+                            Shop Now
+                        </a>
+
+                        <a href="#about"
+                           class="button secondary-button">
+                            Our Story
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-image-wrapper">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop"
+                        alt="Veloura beauty products flatlay"
+                        class="hero-image"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="categories-section">
+
+            <div class="section-content">
+
+                <h2 class="section-title">
+                    Shop by Category
+                </h2>
+
+
+                <div class="category-grid">
+
+
+                    <a href="makeup.html"
+                       class="category-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=500&auto=format&fit=crop"
+                            alt="Makeup"
+                        >
+
+                        <span class="category-name">
+                            Makeup
+                        </span>
+
+                    </a>
+
+
+                    <a href="skincare.html"
+                       class="category-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=500&auto=format&fit=crop"
+                            alt="Skincare"
+                        >
+
+                        <span class="category-name">
+                            Skincare
+                        </span>
+
+                    </a>
+
+
+                    <a href="haircare.html"
+                       class="category-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=500&auto=format&fit=crop"
+                            alt="Haircare"
+                        >
+
+                        <span class="category-name">
+                            Haircare
+                        </span>
+
+                    </a>
+
+
+                    <a href="fragrance.html"
+                       class="category-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=500&auto=format&fit=crop"
+                            alt="Fragrance"
+                        >
+
+                        <span class="category-name">
+                            Fragrance
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NEW ARRIVALS ================= -->
+
+        <section class="products-section">
+
+            <div class="section-content">
+
+                <div class="section-heading-row">
+
+                    <h2 class="section-title">
+                        New Arrivals
+                    </h2>
+
+                    <a href="new-arrivals.html"
+                       class="view-all">
+                        View All
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Products will load from API -->
+
+                <div
+                    class="product-grid"
+                    id="new-arrivals-grid">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROMOTIONAL BANNER ================= -->
+
+        <section class="promo-banner">
+
+            <div class="section-content promo-banner-inner">
+
+                <div>
+
+                    <h2>
+                        Glow More, Spend Less
+                    </h2>
+
+                    <p>
+                        Up to 30% off selected skincare &amp; makeup this week only.
+                    </p>
+
+                </div>
+
+
+                <a href="sale.html"
+                   class="button primary-button">
+                    Shop the Sale
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BEST SELLERS ================= -->
+
+        <section class="products-section">
+
+            <div class="section-content">
+
+                <div class="section-heading-row">
+
+                    <h2 class="section-title">
+                        Best Sellers
+                    </h2>
+
+                    <a href="sale.html"
+                       class="view-all">
+                        View All
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Products will load from API -->
+
+                <div
+                    class="product-grid"
+                    id="best-sellers-grid">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHY CHOOSE VELOURA ================= -->
+
+        <section class="why-section" id="about">
+
+            <div class="section-content">
+
+                <h2 class="section-title">
+                    Why Choose Veloura
+                </h2>
+
+
+                <div class="why-grid">
+
+
+                    <div class="why-card">
+
+                        <i class="fas fa-gem"></i>
+
+                        <h3>
+                            Quality Products
+                        </h3>
+
+                        <p>
+                            Carefully sourced formulas made with skin-loving ingredients.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-card">
+
+                        <i class="fas fa-lock"></i>
+
+                        <h3>
+                            Secure Shopping
+                        </h3>
+
+                        <p>
+                            Your details stay protected on every order, every time.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-card">
+
+                        <i class="fas fa-truck"></i>
+
+                        <h3>
+                            Fast Delivery
+                        </h3>
+
+                        <p>
+                            Quick, reliable shipping straight to your doorstep.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-card">
+
+                        <i class="fas fa-rotate-left"></i>
+
+                        <h3>
+                            Easy Returns
+                        </h3>
+
+                        <p>
+                            Not the right shade? Return it hassle-free within 14 days.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TESTIMONIALS ================= -->
+
+        <section class="testimonials-section">
+
+            <div class="section-content">
+
+                <h2 class="section-title">
+                    What Our Customers Say
+                </h2>
+
+
+                <div class="testimonial-grid">
+
+
+                    <div class="testimonial-card">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "Absolutely loved this product! My skin has never felt better."
+                        </p>
+
+                        <span class="reviewer">
+                            — Amina R.
+                        </span>
+
+                    </div>
+
+
+                    <div class="testimonial-card">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "Fast delivery and the packaging felt so premium. Will order again."
+                        </p>
+
+                        <span class="reviewer">
+                            — Sara K.
+                        </span>
+
+                    </div>
+
+
+                    <div class="testimonial-card">
+
+                        <div class="stars">
+                            ★★★★☆
+                        </div>
+
+                        <p>
+                            "The serum is gentle and the shade range for foundation is great."
+                        </p>
+
+                        <span class="reviewer">
+                            — Hina M.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INSTAGRAM GALLERY ================= -->
+
+        <section class="gallery-section">
+
+            <div class="section-content">
+
+                <h2 class="section-title">
+                    @veloura.beauty
+                </h2>
+
+
+                <div class="gallery-grid">
+
+
+                    <img
+                        src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=400&auto=format&fit=crop"
+                        alt="Beauty gallery"
+                    >
+
+
+                    <img
+                        src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=400&auto=format&fit=crop"
+                        alt="Beauty gallery"
+                    >
+
+
+                    <img
+                        src="https://images.unsplash.com/photo-1591360236480-9c6a4cb3a935?q=80&w=400&auto=format&fit=crop"
+                        alt="Beauty gallery"
+                    >
+
+
+                    <img
+                        src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=400&auto=format&fit=crop"
+                        alt="Beauty gallery"
+                    >
+
+
+                    <img
+                        src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=400&auto=format&fit=crop"
+                        alt="Beauty gallery"
+                    >
+
+
+                    <img
+                        src="https://images.unsplash.com/photo-1571875257727-256c39da42af?q=80&w=400&auto=format&fit=crop"
+                        alt="Beauty gallery"
+                    >
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NEWSLETTER ================= -->
+
+        <section class="newsletter-section">
+
+            <div class="section-content newsletter-inner">
+
+                <h2>
+                    Join the Glow List
+                </h2>
+
+                <p>
+                    Get early access to new launches and members-only offers.
+                </p>
+
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        class="button primary-button">
+                        Subscribe
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="section-content footer-grid">
+
+
+            <div class="footer-col">
+
+                <h2 class="logo-text">
+                    Veloura
+                </h2>
+
+                <p>
+                    Beauty essentials for your everyday glow.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="makeup.html">
+                    Makeup
+                </a>
+
+                <a href="skincare.html">
+                    Skincare
+                </a>
+
+                <a href="haircare.html">
+                    Haircare
+                </a>
+
+                <a href="fragrance.html">
+                    Fragrance
+                </a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>
+                    Help
+                </h4>
+
+                <a href="#">
+                    Shipping &amp; Returns
+                </a>
+
+                <a href="#">
+                    Track Order
+                </a>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    FAQs
+                </a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>
+                    Follow Us
+                </h4>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <p class="footer-bottom">
+            &copy; 2026 Veloura. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="storage.js"></script>
+
+    <script src="products.js"></script>
+
+    <script src="api.js"></script>
+
+
+    <!-- Homepage Product Loader -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", async () => {
+
+            console.log("Homepage loading products...");
+
+
+            // Get products from live backend
+
+            const products =
+                await getProductsFromAPI();
+
+
+            console.log(
+                "Products received:",
+                products
+            );
+
+
+            // ================= NEW ARRIVALS =================
+
+            const newArrivalsGrid =
+                document.getElementById(
+                    "new-arrivals-grid"
+                );
+
+
+            if (newArrivalsGrid) {
+
+                const newArrivals =
+                    products.slice(0, 6);
+
+
+                newArrivalsGrid.innerHTML =
+                    newArrivals
+                        .map(product =>
+                            renderProductCard(product)
+                        )
+                        .join("");
+
+            }
+
+
+            // ================= BEST SELLERS =================
+
+            const bestSellersGrid =
+                document.getElementById(
+                    "best-sellers-grid"
+                );
+
+
+            if (bestSellersGrid) {
+
+                const bestSellers =
+                    products
+                        .slice()
+                        .sort(
+                            (a, b) =>
+                                b.rating - a.rating
+                        )
+                        .slice(0, 6);
+
+
+                bestSellersGrid.innerHTML =
+                    bestSellers
+                        .map(product =>
+                            renderProductCard(product)
+                        )
+                        .join("");
+
+            }
+
+
+            console.log(
+                "Homepage products loaded successfully!"
+            );
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
